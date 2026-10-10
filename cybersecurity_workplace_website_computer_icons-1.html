@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A student-friendly guide to cybersecurity and data protection in the workplace.">
+<title>Cybersecurity & Data Protection in the Workplace</title>
+<style>
+:root{--navy:#0b1f3a;--blue:#1769aa;--sky:#dbeafe;--pale:#eff6ff;--gray:#f3f6fa;--ink:#172b4d;--muted:#53657d;--white:#fff;--line:#d8e1ec}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Poppins,sans-serif;background:var(--gray);color:var(--ink);line-height:1.65}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #08172a35}
+.navwrap{max-width:1120px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-weight:800;letter-spacing:.3px;display:flex;align-items:center;gap:10px}.brandicon{font-size:28px;color:#7dd3fc}
+nav{display:flex;flex-wrap:wrap;gap:14px}nav a{color:#e8f3ff;text-decoration:none;font-size:.92rem;font-weight:600}nav a:hover{color:#7dd3fc}
+.hero{background:linear-gradient(120deg,#0b1f3a,#14548a);color:white;padding:72px 22px}
+.hero-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:35px}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.78rem;color:#9bdcff;font-weight:bold}
+h1{font-size:clamp(2.1rem,5vw,3.7rem);line-height:1.12;margin:12px 0 20px}
+.hero p{font-size:1.1rem;color:#e0efff;max-width:690px}
+.hero-art{background:#ffffff12;border:1px solid #ffffff35;border-radius:26px;padding:30px;text-align:center}
+.hero-art .big{font-size:100px;line-height:1.2}.hero-art p{font-size:.95rem;margin-bottom:0}
+.btn{display:inline-block;border:0;border-radius:9px;background:#60c5f7;color:#092444;padding:12px 18px;font-weight:800;text-decoration:none;cursor:pointer;font-size:1rem}
+.btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
+main{max-width:1120px;margin:auto;padding:30px 22px 60px}
+section{scroll-margin-top:90px;margin:28px 0 42px}
+.sectionhead{max-width:760px;margin-bottom:22px}.sectionhead h2{font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.2;margin:0 0 8px;color:var(--navy)}
+.sectionhead p{margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 5px 18px #102e5010}
+.card .icon{font-size:34px}.card h3{margin:8px 0;color:var(--navy);font-size:1.15rem}.card p{margin:0;color:var(--muted)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.callout{background:var(--sky);border-left:5px solid var(--blue);border-radius:12px;padding:22px}
+ul.tips{padding-left:22px}ul.tips li{margin:9px 0}
+.tag{display:inline-block;background:var(--pale);color:#124b82;padding:4px 9px;border-radius:20px;font-size:.8rem;font-weight:bold}
+.quizbox{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}
+.question{padding:17px 0;border-bottom:1px solid var(--line)}.question:last-of-type{border-bottom:0}
+.question legend{font-weight:700;margin-bottom:10px}.question label{display:block;padding:5px 0;cursor:pointer;color:#34465e}
+input[type=radio]{accent-color:var(--blue);margin-right:8px}
+#quiz-result{margin-top:18px;padding:15px;border-radius:10px;display:none;background:var(--pale);font-weight:bold}
+.references li{margin:12px 0;overflow-wrap:anywhere}.references a{color:#145da0}
+.quote{background:var(--navy);color:white;border-radius:18px;padding:34px;text-align:center}.quote blockquote{font-size:clamp(1.35rem,3vw,2rem);line-height:1.45;margin:0 auto 12px;max-width:850px;font-weight:bold}.quote p{color:#a8dcff;margin:0}
+footer{background:#07172b;color:#d4e4f7;text-align:center;padding:24px 18px;font-size:.9rem}
+.small{font-size:.88rem;color:var(--muted)}
+@media(max-width:800px){.hero-inner{grid-template-columns:1fr}.hero-art{display:none}.grid{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}.navwrap{align-items:flex-start;flex-direction:column}nav{gap:10px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding:50px 18px}main{padding:22px 16px 45px}.card{padding:19px}}
+
+/* Extra visual polish */
+:root{--electric:#38bdf8;--lavender:#c4b5fd;--mint:#99f6e4;--coral:#fda4af}
+body{background:radial-gradient(circle at 8% 18%,#e5f2ff 0,transparent 25%),radial-gradient(circle at 95% 48%,#e6f8ff 0,transparent 22%),var(--gray)}
+header{background:rgba(7,23,43,.96);backdrop-filter:blur(12px)}
+.brandicon{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#38bdf8,#818cf8);color:#082344;box-shadow:0 5px 18px #38bdf84a}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 20%,#2477b8 0,transparent 28%),linear-gradient(125deg,#07172b 0%,#0b2b50 52%,#155e91 100%)}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff20;border-radius:50%;pointer-events:none}
+.hero:before{width:360px;height:360px;right:-100px;top:-140px;box-shadow:0 0 0 30px #ffffff08,0 0 0 70px #ffffff05}
+.hero:after{width:190px;height:190px;left:-95px;bottom:-105px;box-shadow:0 0 0 25px #ffffff08}
+.hero-inner{position:relative;z-index:1}
+.hero-art{position:relative;overflow:hidden;background:linear-gradient(145deg,#ffffff1c,#ffffff08);box-shadow:0 20px 55px #02081740}
+.hero-art:before{content:"✦";position:absolute;right:24px;top:8px;font-size:28px;color:#a5f3fc}
+.hero-art .big{display:inline-grid;place-items:center;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,#dbeafe 0%,#7dd3fc 45%,#2563eb 100%);box-shadow:0 0 0 12px #ffffff0c,0 0 55px #38bdf84d;font-size:82px;margin:4px 0 18px}
+.hero-art p{max-width:310px;margin:10px auto 0}
+.btn{box-shadow:0 8px 22px #38bdf82b;transition:transform .2s,box-shadow .2s}
+.btn:hover{box-shadow:0 12px 26px #38bdf84d}
+.sectionhead{position:relative;padding-left:15px}
+.sectionhead:before{content:"";position:absolute;left:0;top:2px;bottom:3px;width:4px;border-radius:9px;background:linear-gradient(#38bdf8,#818cf8)}
+.tag{background:linear-gradient(90deg,#dbeafe,#ede9fe);color:#1d4ed8;letter-spacing:.5px}
+.card{position:relative;overflow:hidden;transition:transform .22s,box-shadow .22s,border-color .22s}
+.card:after{content:"";position:absolute;width:100px;height:100px;border-radius:50%;right:-48px;top:-48px;background:linear-gradient(135deg,#dbeafe88,#c4b5fd44);pointer-events:none}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px #12345a18;border-color:#a5c9ed}
+.card .icon{display:inline-grid;place-items:center;width:62px;height:62px;border-radius:18px;background:linear-gradient(135deg,#e0f2fe,#e0e7ff);font-size:32px;box-shadow:inset 0 0 0 1px #bfdbfe}
+.card h3{position:relative;z-index:1}
+.callout{background:linear-gradient(120deg,#e0f2fe,#eef2ff);box-shadow:0 8px 22px #1d4ed80b}
+.two-col .card .icon{margin-bottom:2px}
+.quizbox{box-shadow:0 15px 40px #0b1f3a0c}
+.question{border-bottom:1px dashed #cbd5e1}
+.question label{border-radius:8px;padding:8px 10px;transition:background .15s}
+.question label:hover{background:#eff6ff}
+input[type=radio]{transform:scale(1.12)}
+#quiz-result{border:1px solid #bfdbfe;box-shadow:inset 4px 0 #2563eb}
+.references li::marker{color:#1769aa;font-weight:bold}
+.quote{position:relative;overflow:hidden;background:radial-gradient(circle at 8% 0,#1d4f7c 0,transparent 35%),linear-gradient(135deg,#07172b,#123d67);box-shadow:0 18px 40px #0b1f3a20}
+.quote:before,.quote:after{content:"✦";position:absolute;color:#7dd3fc66;font-size:42px}
+.quote:before{top:15px;right:28px}.quote:after{bottom:12px;left:28px;font-size:25px}
+footer{background:linear-gradient(120deg,#061426,#0b2a4a)}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+
+.computer-icon{display:inline-flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:18px;background:linear-gradient(135deg,#dbeafe,#e0e7ff);box-shadow:inset 0 0 0 1px #bfdbfe;color:#1769aa}
+.computer-icon svg{width:39px;height:39px;display:block}
+.hero-devices{display:flex;justify-content:center;align-items:center;gap:14px;margin:5px 0 12px}
+.hero-devices .device{display:grid;place-items:center;width:62px;height:58px;border:1px solid #ffffff35;border-radius:15px;background:#ffffff12;color:#bae6fd}
+.hero-devices svg{width:38px;height:38px}
+.card .computer-icon{margin-bottom:2px}
+
+</style>
+</head>
+<body>
+<header>
+ <div class="navwrap">
+  <div class="brand"><span class="brandicon">🛡</span><span>CYBERSECURITY AT WORK</span></div>
+  <nav aria-label="Main navigation">
+   <a href="#about">About</a><a href="#threats">Threats</a><a href="#tips">Safety Tips</a><a href="#data">Data Protection</a><a href="#quiz">Quiz</a><a href="#references">References</a>
+  </nav>
+ </div>
+</header>
+<div class="hero">
+ <div class="hero-inner">
+  <div>
+   <div class="eyebrow">✦ A safer digital workplace starts with you</div>
+   <h1>Cybersecurity &amp; Data Protection in the Workplace</h1>
+   <p>Learn how to protect accounts, recognize online threats, and keep confidential office information safe. Small, responsible actions can make a big difference.</p>
+   <a class="btn" href="#tips">Explore Safety Tips ↓</a>
+  </div>
+  <div class="hero-art"><div class="big">🔐</div><div class="hero-devices" aria-label="Computer, laptop, and secure cloud icons">
+      <span class="device" title="Desktop computer"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="6" width="38" height="26" rx="3"/><path d="M24 32v7M16 41h16M18 39h12"/></svg></span>
+      <span class="device" title="Laptop"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="6" width="28" height="25" rx="2.5"/><path d="M5 37h38l-4-6H9z"/></svg></span>
+      <span class="device" title="Cybersecurity shield"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 4 40 10v12c0 10-7 17-16 22C15 39 8 32 8 22V10z"/><path d="m16 23 5 5 11-12"/></svg></span>
+    </div><p>Protect your password. Check before you click. Keep information private.</p></div>
+ </div>
+</div>
+<main>
+<section id="about">
+ <div class="sectionhead"><span class="tag">01 · INTRODUCTION</span><h2>Why Cybersecurity Matters</h2><p>Cybersecurity means protecting computers, accounts, networks, and information from unauthorized access, damage, or misuse. Data protection means handling personal and confidential information carefully and lawfully.</p></div>
+ <div class="two-col">
+  <div class="card"><div class="computer-icon" aria-label="Desktop computer icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="38" height="27" rx="3"/><path d="M24 32v7M16 42h16M18 39h12"/><path d="M11 11h26v15H11z" fill="#93c5fd" stroke="none"/></svg></div><h3>In the workplace</h3><p>Offices use digital tools to communicate, store files, manage employee records, and serve customers. These activities need safe and responsible technology use.</p></div>
+  <div class="callout"><h3>Our goal</h3><p>Help students and employees build safer digital habits, respect privacy, and understand that cybersecurity is everyone's responsibility—not only the IT team's.</p></div>
+ </div>
+</section>
+<section id="threats">
+ <div class="sectionhead"><span class="tag">02 · KNOW THE RISKS</span><h2>Common Cybersecurity Threats</h2><p>Knowing what to look for helps people respond before a problem becomes more serious.</p></div>
+ <div class="grid">
+  <article class="card"><div class="icon">🔑</div><h3>Password attacks</h3><p>Attempts to guess, steal, or misuse login details. Reusing passwords can put several accounts at risk.</p></article>
+  <article class="card"><div class="icon">🎣</div><h3>Phishing</h3><p>Fake emails, texts, or websites that try to trick people into sharing information or opening unsafe links.</p></article>
+  <article class="card"><div class="icon">🦠</div><h3>Malware</h3><p>Harmful software that may damage a device, disrupt work, or steal information.</p></article>
+  <article class="card"><div class="icon">🚨</div><h3>Data breaches</h3><p>Situations where information is accessed, disclosed, or exposed without authorization.</p></article>
+  <article class="card"><div class="icon">📲</div><h3>Weak account security</h3><p>Accounts can be more vulnerable when they lack strong passwords or an additional verification step.</p></article>
+  <article class="card"><div class="icon">📎</div><h3>Unsafe attachments</h3><p>Unexpected files may contain harmful content. Verify suspicious messages through a trusted channel.</p></article>
+ </div>
+</section>
+<section id="tips">
+ <div class="sectionhead"><span class="tag">03 · PRACTICAL STEPS</span><h2>Everyday Cybersecurity Safety Tips</h2><p>Make these habits part of your normal work routine.</p></div>
+ <div class="two-col">
+  <div class="card"><h3>🔒 Protect your accounts</h3><ul class="tips"><li>Use long, unique passwords for each account.</li><li>Use an approved password manager when available.</li><li>Enable two-factor or multifactor authentication (2FA/MFA).</li><li>Never share passwords or verification codes.</li></ul></div>
+  <div class="card"><h3><span style="display:inline-flex;vertical-align:middle;margin-right:7px;color:#1769aa"><svg viewBox="0 0 32 32" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="20" height="18" rx="2"/><path d="M3 26h26l-3-4H6z"/></svg></span>Protect your devices</h3><ul class="tips"><li>Install updates approved by your organization.</li><li>Lock your screen when you step away.</li><li>Use approved security tools and networks.</li><li>Back up important files according to workplace policy.</li></ul></div>
+  <div class="card"><h3>✉️ Spot suspicious messages</h3><ul class="tips"><li>Check the sender and the context of the message.</li><li>Be careful with urgent requests and unexpected links.</li><li>Verify unusual requests using a trusted contact method.</li><li>Report suspicious messages to the IT or security team.</li></ul></div>
+  <div class="card"><h3>🤝 Be responsible online</h3><ul class="tips"><li>Respect other people's privacy.</li><li>Use technology fairly and inclusively.</li><li>Do not access files without permission.</li><li>Follow your organization's cybersecurity policies.</li></ul></div>
+ </div>
+</section>
+<section id="data">
+ <div class="sectionhead"><span class="tag">04 · KEEP INFORMATION SAFE</span><h2>Protecting Confidential Office Information</h2><p>Employee records, customer details, financial documents, and internal files should be handled with care.</p></div>
+ <div class="grid">
+  <div class="card"><div class="icon">👤</div><h3>Limit access</h3><p>Share information only with people who are authorized and need it for their work.</p></div>
+  <div class="card"><div class="icon">📤</div><h3>Check before sending</h3><p>Confirm email recipients and attachments before sending confidential files.</p></div>
+  <div class="card"><div class="icon">🗄️</div><h3>Store files safely</h3><p>Use approved storage locations and follow company rules for keeping or disposing of records.</p></div>
+ </div>
+ <div class="callout" style="margin-top:18px"><strong>If you suspect a data leak or security incident:</strong> report it promptly through your workplace's approved process. Do not hide the incident or forward confidential information unnecessarily.</div>
+</section>
+<section id="quiz">
+ <div class="sectionhead"><span class="tag">05 · TEST YOUR KNOWLEDGE</span><h2>Cybersecurity Quick Quiz</h2><p>Choose one answer for each question, then submit to see your score and explanations.</p></div>
+ <div class="quizbox">
+  <form id="quiz-form">
+   <fieldset class="question"><legend>1. An unexpected email asks for your office password. What should you do?</legend>
+    <label><input type="radio" name="q1" value="a" required> Reply with your password</label><label><input type="radio" name="q1" value="b"> Click the link immediately</label><label><input type="radio" name="q1" value="c"> Avoid the link and report the email</label><label><input type="radio" name="q1" value="d"> Forward it to everyone</label>
+   </fieldset>
+   <fieldset class="question"><legend>2. What is the purpose of two-factor authentication (2FA)?</legend>
+    <label><input type="radio" name="q2" value="a" required> To add another identity check</label><label><input type="radio" name="q2" value="b"> To make the internet faster</label><label><input type="radio" name="q2" value="c"> To remove your password</label><label><input type="radio" name="q2" value="d"> To make files public</label>
+   </fieldset>
+   <fieldset class="question"><legend>3. Which password practice is safer?</legend>
+    <label><input type="radio" name="q3" value="a" required> Using your birthday</label><label><input type="radio" name="q3" value="b"> Reusing one password everywhere</label><label><input type="radio" name="q3" value="c"> Sharing passwords with coworkers</label><label><input type="radio" name="q3" value="d"> Using long, unique passwords</label>
+   </fieldset>
+   <fieldset class="question"><legend>4. Before emailing confidential office files, you should:</legend>
+    <label><input type="radio" name="q4" value="a" required> Send them to any available address</label><label><input type="radio" name="q4" value="b"> Check that the recipient is authorized</label><label><input type="radio" name="q4" value="c"> Post them on social media</label><label><input type="radio" name="q4" value="d"> Leave your account open on a shared computer</label>
+   </fieldset>
+   <fieldset class="question"><legend>5. What is malware?</legend>
+    <label><input type="radio" name="q5" value="a" required> A computer desk accessory</label><label><input type="radio" name="q5" value="b"> A type of office document</label><label><input type="radio" name="q5" value="c"> Software designed to cause harm or unwanted actions</label><label><input type="radio" name="q5" value="d"> A strong password</label>
+   </fieldset>
+   <button class="btn" type="submit">Submit Quiz</button>
+   <button class="btn" type="reset" style="background:#e3eaf3;margin-left:8px">Try Again</button>
+  </form>
+  <div id="quiz-result" role="status" aria-live="polite"></div>
+ </div>
+</section>
+<section id="references">
+ <div class="sectionhead"><span class="tag">06 · SOURCES</span><h2>References</h2><p>These credible resources offer further guidance on cybersecurity and safe digital practices.</p></div>
+ <div class="card references"><ol>
+  <li>Cybersecurity and Infrastructure Security Agency. (n.d.). <em>Secure our world.</em> <a href="https://www.cisa.gov/secure-our-world" target="_blank" rel="noopener noreferrer">https://www.cisa.gov/secure-our-world</a></li>
+  <li>Cybersecurity and Infrastructure Security Agency. (n.d.). <em>Require multifactor authentication.</em> <a href="https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/require-multifactor-authentication" target="_blank" rel="noopener noreferrer">CISA — Multifactor authentication for businesses</a></li>
+  <li>National Institute of Standards and Technology. (2024). <em>Building a cybersecurity and privacy learning program</em> (NIST SP 800-50 Rev. 1). <a href="https://csrc.nist.gov/pubs/sp/800/50/r1/final" target="_blank" rel="noopener noreferrer">https://csrc.nist.gov/pubs/sp/800/50/r1/final</a></li>
+  <li>Republic of the Philippines. (2012). <em>Republic Act No. 10173: Data Privacy Act of 2012.</em> National Privacy Commission. <a href="https://privacy.gov.ph/data-privacy-act/" target="_blank" rel="noopener noreferrer">https://privacy.gov.ph/data-privacy-act/</a></li>
+ </ol><p class="small">Image and icon note: the icons on this website are emoji used as decorative symbols. If you replace or add images, credit the creator and follow the image's license requirements.</p></div>
+</section>
+<section>
+ <div class="quote"><div style="font-size:36px;color:#7dd3fc">❝</div><blockquote>Think before you click, protect what you share, and make digital safety everyone's responsibility.</blockquote><p>Original cybersecurity awareness quote</p></div>
+</section>
+</main>
+<footer><strong>Cybersecurity &amp; Data Protection in the Workplace</strong><br>Learn responsibly. Protect information. Build a safer digital workplace.<br><span style="color:#9fb4cc">Student educational project · Always follow your organization's official security policies.</span></footer>
+<script>
+const explanations={
+ q1:"Avoid suspicious links and report the message through the appropriate workplace process.",
+ q2:"2FA adds another step to verify your identity, beyond the password.",
+ q3:"Long, unique passwords help prevent one compromised account from putting other accounts at risk.",
+ q4:"Confirm that the recipient is authorized before sending confidential information.",
+ q5:"Malware is malicious software that can damage devices, disrupt activity, or compromise information."
+};
+const answers={q1:"c",q2:"a",q3:"d",q4:"b",q5:"c"};
+document.getElementById("quiz-form").addEventListener("submit",function(e){
+ e.preventDefault();let score=0,review=[];
+ for(const [q,correct] of Object.entries(answers)){
+  const chosen=this.querySelector('input[name="'+q+'"]:checked');
+  if(chosen&&chosen.value===correct)score++;
+  review.push("<p><strong>"+q.toUpperCase()+": "+((chosen&&chosen.value===correct)?"Correct ✓":"Review this answer")+"</strong> — "+explanations[q]+"</p>");
+ }
+ const result=document.getElementById("quiz-result");
+ result.style.display="block";
+ result.innerHTML="<h3>Your score: "+score+" / 5</h3>"+(score===5?"Excellent work! You understand these cybersecurity basics.":"Review the explanations below and try again to improve your score.")+review.join("");
+ result.scrollIntoView({behavior:"smooth",block:"nearest"});
+});
+document.getElementById("quiz-form").addEventListener("reset",function(){
+ const result=document.getElementById("quiz-result");result.style.display="none";result.innerHTML="";
+});
+</script>
+</body>
+</html>
